@@ -90,7 +90,7 @@ Diff_t* myers_diff(char *a, int len_a, char *b, int len_b, int *diff_count)
 
 FOUND:
     // traceback Path
-    max_diff = len_a + len_b - d + 1;
+    max_diff = (len_a + len_b + d) / 2;
     *diff_count = 0;
     diffs = (Diff_t *)malloc(sizeof(Diff_t) * (*diff_count));
 
