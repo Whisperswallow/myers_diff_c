@@ -92,7 +92,7 @@ FOUND:
     // traceback Path
     max_diff = (len_a + len_b + d) / 2;
     *diff_count = 0;
-    diffs = (Diff_t *)malloc(sizeof(Diff_t) * (*diff_count));
+    diffs = (Diff_t *)calloc(max_diff, sizeof(Diff_t));
 
     if (head) {
         int cur_x = len_a;
